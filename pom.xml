@@ -19,6 +19,7 @@
 
     <dependencies>
 
+        <!-- Compile dependencies -->
         <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-autoconfigure -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -39,6 +40,26 @@
             <artifactId>serveragent-spring</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+<!--        &lt;!&ndash; Optional dependencies &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-api</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-autoconfigure-processor</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; @ConfigurationProperties annotation processing (metadata for IDEs) &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-configuration-processor</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
 
     </dependencies>
 

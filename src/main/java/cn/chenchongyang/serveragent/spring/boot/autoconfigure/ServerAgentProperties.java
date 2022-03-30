@@ -14,7 +14,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = ServerAgentProperties.SERVER_AGENT_PREFIX)
 public class ServerAgentProperties {
 
-    public static final String SERVER_AGENT_PREFIX = "server.agent";
+    public static final String SERVER_AGENT_PREFIX = "server-agent";
 
     private String timeout;
 
@@ -25,4 +25,5 @@ public class ServerAgentProperties {
     public void setTimeout(String timeout) {
         this.timeout = timeout;
     }
+
 }

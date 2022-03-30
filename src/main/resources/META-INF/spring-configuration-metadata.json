@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "sourceType": "cn.chenchongyang.serveragent.spring.boot.autoconfigure.ServerAgentProperties",
+      "name": "server-agent",
+      "type": "cn.chenchongyang.serveragent.spring.boot.autoconfigure.ServerAgentProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "cn.chenchongyang.serveragent.spring.boot.autoconfigure.ServerAgentProperties",
+      "name": "server-agent.timeout",
+      "type": "java.lang.Integer"
+    }
+  ],
+  "hints": [
+    {
+      "name": "server-agent.timeout",
+      "values": [
+        {
+          "value": "20",
+          "description": "超时时长"
+        }
+      ]
+    }
+  ]
+}
