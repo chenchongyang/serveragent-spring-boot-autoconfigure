@@ -4,8 +4,9 @@ package cn.chenchongyang.serveragent.spring.boot.autoconfigure;
 import cn.chenchongyang.serveragent.spring.ServerAgentFactorBean;
 import cn.chenchongyang.serveragent.spring.ServerAgentScannerConfigurer;
 import cn.chenchongyang.serveragent.spring.annotations.ServerAgent;
-import lombok.extern.slf4j.Slf4j;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
@@ -30,10 +31,11 @@ import java.util.List;
  * @see org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
  * @since 2022-03-29
  */
-@Slf4j
 @Configuration
 @EnableConfigurationProperties(ServerAgentProperties.class)
 public class ServerAgentAutoConfiguration implements InitializingBean {
+
+    private static final Logger logger = LoggerFactory.getLogger(ServerAgentAutoConfiguration.class);
 
     @Override
     public void afterPropertiesSet() throws Exception {
@@ -83,7 +85,7 @@ public class ServerAgentAutoConfiguration implements InitializingBean {
         @Override
         public void afterPropertiesSet() throws Exception {
             // todo 未设计 @ServerAgentScan
-            log.debug(
+            logger.debug(
                 "Not found configuration for registering mapper bean using @ServerAgentScan, ServerAgentFactorBean and ServerAgentScannerConfigurer.");
         }
     }
