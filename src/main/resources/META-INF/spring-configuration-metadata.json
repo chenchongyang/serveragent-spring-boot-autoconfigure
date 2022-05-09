@@ -14,14 +14,5 @@
     }
   ],
   "hints": [
-    {
-      "name": "server-agent.timeout",
-      "values": [
-        {
-          "value": "20",
-          "description": "超时时长"
-        }
-      ]
-    }
   ]
 }

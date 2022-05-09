@@ -2,8 +2,7 @@
   "properties": [
     {
       "name": "server-agent.timeout",
-      "description": "网络请求超时时长， -1表示永不超时.",
-      "defaultValue": -1,
+      "description": "网络请求超时时长，默认永不超时.",
       "type": "java.lang.Integer"
     }
   ]
