@@ -51,11 +51,18 @@ public class ServerAgentAutoConfiguration implements InitializingBean {
         public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata,
             BeanDefinitionRegistry registry) {
 
-            if (AutoConfigurationPackages.has(beanFactory)) {
+            if (!AutoConfigurationPackages.has(beanFactory)) {
+                logger.debug("Could not determine auto-configuration package, automatic mapper scanning disabled.");
                 return;
             }
 
+            logger.debug("Searching for serverAgent annotated with @ServerAgent");
+
             List<String> packages = AutoConfigurationPackages.get(beanFactory);
+
+            if (logger.isDebugEnabled()) {
+                packages.forEach(pkg -> logger.debug("Using auto-configuration base package '{}'", pkg));
+            }
 
             BeanDefinitionBuilder builder =
                 BeanDefinitionBuilder.genericBeanDefinition(ServerAgentScannerConfigurer.class);
@@ -84,9 +91,8 @@ public class ServerAgentAutoConfiguration implements InitializingBean {
 
         @Override
         public void afterPropertiesSet() throws Exception {
-            // todo 未设计 @ServerAgentScan
             logger.debug(
-                "Not found configuration for registering mapper bean using @ServerAgentScan, ServerAgentFactorBean and ServerAgentScannerConfigurer.");
+                "Not found configuration for registering serverAgent bean using @ServerAgentScan, ServerAgentFactorBean and ServerAgentScannerConfigurer.");
         }
     }
 
