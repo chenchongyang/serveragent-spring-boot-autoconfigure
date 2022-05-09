@@ -16,14 +16,16 @@ public class ServerAgentProperties {
 
     public static final String SERVER_AGENT_PREFIX = "server-agent";
 
-    private String timeout;
+    /**
+     * 超时设置
+     */
+    private Integer timeout;
 
-    public String getTimeout() {
+    public Integer getTimeout() {
         return timeout;
     }
 
-    public void setTimeout(String timeout) {
+    public void setTimeout(Integer timeout) {
         this.timeout = timeout;
     }
-
 }
